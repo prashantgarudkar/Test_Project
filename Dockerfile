@@ -6,5 +6,4 @@ RUN sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|
 RUN yum install httpd -y
 ADD index.html /var/www/html/
 RUN /usr/sbin/httpd 
-RUN docker run -itd --name test_httpd centos_httpd
-RUN docker inspect test_httpd | grep IPAddress
+
