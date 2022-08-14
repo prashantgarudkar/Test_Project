@@ -1,6 +1,3 @@
 #Base Image
 FROM centos:latest
-RUN yum install httpd
-ADD index.html /var/www/html/
-RUN systemctl enable httpd
-RUN systemctl start httpd
+ADD index.html /tmp/
